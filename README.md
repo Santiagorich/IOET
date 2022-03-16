@@ -53,3 +53,12 @@ ASTRID=MO10:00-12:00,TH12:00-14:00,SU20:00-21:00
 
 OUTPUT:
 The amount to pay ASTRID is: 85 USD
+
+# Usage
+
+'''py main.py <INPUT>'''
+
+# How it works
+
+The app is composed of multiple functions to parse,validate and process each line of the input file, there is also a .py with constants we can configure to change the range of hours for each shift, the weekends and the precision for calculating the rate per hour (changing the "hourstep" we can change how often we check the rate while iterating hours)
+  
