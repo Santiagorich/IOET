@@ -24,7 +24,12 @@ def test_app3():
 def test_app4():
     assert check_shift({'day': 'MO', 'start': datetime(1900, 1, 1, 13, 0), 'end': datetime(1900, 1, 1, 12, 0)},'RENE')
 
+#Check should throw an error if the name contains anything other than letters
+@pytest.mark.xfail(raises=ValueError)
 def test_app5():
+    assert check_shift({'day': 'MO', 'start': datetime(1900, 1, 1, 13, 0), 'end': datetime(1900, 1, 1, 12, 0)},'RENE563456')
+
+def test_app6():
     result = calculate_pay({'day': 'MO', 'start': datetime(1900, 1, 1, 10, 0), 'end': datetime(1900, 1, 1, 12, 0)})
     assert result == 30
     
