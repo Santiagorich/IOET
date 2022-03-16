@@ -5,23 +5,33 @@ The company ACME offers their employees the flexibility to work the hours they w
 Monday - Friday
 
 00:01 - 09:00 25 USD
+
 09:01 - 18:00 15 USD
+
 18:01 - 00:00 20 USD
 
 Saturday and Sunday
 
 00:01 - 09:00 30 USD
+
 09:01 - 18:00 20 USD
+
 18:01 - 00:00 25 USD
 
 The goal of this exercise is to calculate the total that the company has to pay an employee, based on the hours they worked and the times during which they worked. The following abbreviations will be used for entering data:
 
 MO: Monday
+
 TU: Tuesday
+
 WE: Wednesday
+
 TH: Thursday
+
 FR: Friday
+
 SA: Saturday
+
 SU: Sunday
 
 Input: the name of an employee and the schedule they worked, indicating the time and hours. This should be a .txt file with at least five sets of data. You can include the data from our two examples below.
