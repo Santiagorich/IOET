@@ -56,7 +56,7 @@ The amount to pay ASTRID is: 85 USD
 
 # Usage
 
-'''py main.py <INPUT>'''
+```py main.py <INPUT>```
 
 # How it works
 
