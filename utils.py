@@ -51,6 +51,7 @@ def check_shift(shift,name):
     #Check if the start hour is after the end hour
     if shift['start'] > shift['end']:
         raise ValueError('Start time is after end time in {}\'s shift \n{}: {} > {}'.format(name,shift['day'],datetime.strftime(shift['start'], '%H:%M'), datetime.strftime(shift['end'], '%H:%M')))
+    #Check if there are only letters in the name
     if name.isalpha() == False:
         raise ValueError('Name should contain only letters')
 
