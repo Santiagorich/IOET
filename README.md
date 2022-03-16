@@ -54,6 +54,12 @@ ASTRID=MO10:00-12:00,TH12:00-14:00,SU20:00-21:00
 OUTPUT:
 The amount to pay ASTRID is: 85 USD
 
+# Requirements
+
+For testing you will need to install pytest
+
+```pip install pytest```
+
 # Usage
 
 ```py main.py <INPUT>```
