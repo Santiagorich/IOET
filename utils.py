@@ -6,12 +6,12 @@ import re
 days_re = '(MO|TU|WE|TH|FR|SA|SU)'
 
 #Convert hours to date
-morningstart=datetime.strptime(morning_shift['start'],'%H:%M')
-morningsend=datetime.strptime(morning_shift['end'],'%H:%M')
-middaystart=datetime.strptime(midday_shift['start'],'%H:%M')
-middayend=datetime.strptime(midday_shift['end'],'%H:%M')
-eveningstart=datetime.strptime(evening_shift['start'],'%H:%M')
-eveningend=datetime.strptime(evening_shift['end'],'%H:%M')
+morning_start=datetime.strptime(morning_shift['start'],'%H:%M')
+morning_end=datetime.strptime(morning_shift['end'],'%H:%M')
+midday_start=datetime.strptime(midday_shift['start'],'%H:%M')
+midday_end=datetime.strptime(midday_shift['end'],'%H:%M')
+evening_start=datetime.strptime(evening_shift['start'],'%H:%M')
+evening_end=datetime.strptime(evening_shift['end'],'%H:%M')
 
 def deserialize_schedules(finput):
     resultarr = []
@@ -70,11 +70,11 @@ def calculate_pay(shift):
     #Check rate every step
     while(adder <= worked):
         analyze = shift['start'] + timedelta(hours=adder)
-        if morningstart <= analyze <= morningsend:
+        if morning_start <= analyze <= morning_end:
             rate = morning_shift[ratetype] * hourstep
-        elif middaystart <= analyze <= middayend:
+        elif midday_start <= analyze <= midday_end:
             rate = midday_shift[ratetype] * hourstep
-        elif eveningstart <= analyze <= eveningend:
+        elif evening_start <= analyze <= evening_end:
             rate = evening_shift[ratetype] * hourstep
         adder += hourstep
         total += rate
